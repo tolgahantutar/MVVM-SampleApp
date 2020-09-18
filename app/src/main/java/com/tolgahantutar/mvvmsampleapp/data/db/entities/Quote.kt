@@ -2,11 +2,14 @@ package com.tolgahantutar.mvvmsampleapp.data.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.fasterxml.jackson.annotation.JsonProperty
+import com.google.gson.annotations.SerializedName
 
 @Entity
 data class Quote (
     @PrimaryKey(autoGenerate = false)
-    val Id : Int,
+    @SerializedName("id")
+    val Id : Int ,
     val quote: String?,
     val author: String?,
     val thumbnail: String?,
